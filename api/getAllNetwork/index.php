@@ -2,7 +2,7 @@
     header('Content-Type: application/json');
 	$resultat = '[]';
 	try{
-		$dbh = new PDO('mysql:host=127.0.0.1;port=3306;dbname=ep', 'root', '');
+		$dbh = new PDO('mysql:host=127.0.0.1;port=3306;dbname=ep_db', 'root', '');
 		$stmt = $dbh->prepare("SELECT * FROM light_stops");
 		$stmt->execute();
 		$feuxTricolors=$stmt->fetchAll(PDO::FETCH_ASSOC);
